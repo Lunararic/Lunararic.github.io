@@ -2,4 +2,6 @@
 title: "Yue Gu"
 ---
 
-This is a webpage introducing academic and professional experience as a Columbia University graduate student
+## Hello Friends!
+
+This is a webpage introducing my academic and professional experience as a Columbia University graduate student.
