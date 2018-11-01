@@ -5,8 +5,10 @@ navbar:
   right:
     - text: "About"
       href: about.html
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/yue-gu-277895b0/
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<yg2625@cumc.columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/<YOUR_GH_NAME>/
 output:

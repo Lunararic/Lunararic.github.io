@@ -5,3 +5,5 @@ title: "Yue Gu"
 ## Hello Friends!
 
 This is a webpage introducing my academic and professional experience as a Columbia University graduate student.
+
+<img src="images/whitelion.jpg" style="width:75%">
