@@ -1,0 +1,59 @@
+---
+title: "dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+```
+
+```{r}
+data(ny_noaa)
+noaa_tidy =
+  ny_noaa %>% 
+  separate(date, into = c("year", "month", "day"), sep = "-") %>% 
+  mutate(.data = ., prcp = as.numeric(prcp)/10, tmax = as.numeric(tmax)/10, tmin = as.numeric(tmin)/10)
+
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+noaa_tidy %>%
+  filter(tmax != "", tmin != "", year == 2006 | year == 2007 |year == 2008 | year == 2009 | year == 2010) %>%
+  plot_ly(x = ~tmax, y = ~tmin, type = "scatter", mode = "markers",
+         alpha = 0.5,
+         color = ~year)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+noaa_tidy %>% 
+  filter(prcp != "", year == 2010) %>% 
+  plot_ly(x = ~month, y = ~prcp, color = ~month, type = "bar")
+```
+
+### Chart C
+
+```{r}
+noaa_tidy %>% 
+  filter(tmin != "",year == 2002 | year == 2003 | year == 2004 | year == 2005 |year == 2006 | year == 2007 |year == 2008 | year == 2009 | year == 2010) %>% 
+  plot_ly(y = ~tmin, color = ~year, type = "box", colors = "Set2")
+
+```
+
