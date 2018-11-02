@@ -26,19 +26,18 @@ noaa_tidy =
 
 Column {data-width=650}
 -----------------------------------------------------------------------
-
-### Scatterplots for Maximum and Minimum temperature from 2008 to 2010 
+### Boxplots for Minimum temperature from 2005 to 2010
 
 ```{r}
-noaa_tidy %>%
-  filter(tmax != "", tmin != "", year == 2008 | year == 2009 | year == 2010) %>%
-  plot_ly(x = ~tmax, y = ~tmin, type = "scatter", mode = "markers",
-         alpha = 0.5,
-         color = ~year)
+noaa_tidy %>% 
+  filter(tmin != "", year == 2005 | year == 2006 | year == 2007 |year == 2008 | year == 2009 | year == 2010) %>% 
+  plot_ly(y = ~tmin, color = ~year, type = "box", colors = "Set2")
+
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
+
 
 ### Barplots for Precipitation over 12 months in 2010
 
@@ -48,14 +47,18 @@ noaa_tidy %>%
   plot_ly(x = ~month, y = ~prcp, color = ~month, type = "bar")
 ```
 
-### Boxplots for Minimum temperature from 2005 to 2010
+
+
+### Scatterplots for Maximum and Minimum temperature over 12 months in 2010 
 
 ```{r}
-noaa_tidy %>% 
-  filter(tmin != "", year == 2006 | year == 2007 |year == 2008 | year == 2009 | year == 2010) %>% 
-  plot_ly(y = ~tmin, color = ~year, type = "box", colors = "Set2")
-
+noaa_tidy %>%
+  filter(tmax != "", tmin != "", year == 2010) %>%
+  plot_ly(x = ~tmax, y = ~tmin, type = "scatter", mode = "markers",
+         alpha = 0.5,
+         color = ~month)
 ```
+
 
 
 
