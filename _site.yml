@@ -8,6 +8,8 @@ navbar:
   right:
     - text: "About"
       href: about.html
+    - text: "Dashboard"
+      href: dashboard.html
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/yue-gu-277895b0/
     - icon: fa-envelope fa-lg
