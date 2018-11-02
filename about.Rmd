@@ -1,11 +1,23 @@
 ---
 title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ### About this site
 
+## Intro
 The site is created for homework of P8105 with R 3.5.1.
 
 Using tidyverse, plotly, flexdashboard packages, the website is built with about.html, dashboard.html, resume.html and index.html.
 
+## Plot comments
+In the dashboard:
+From boxplots, there is 2 high extreme outlier in minimum temperature of 2008 and several low extreme outlier in 2007 and 2008.
+From barplots, August and October have relatively high precipitation in 2010 mainly due to the seasonal effect.
+From scatterplots, the minimum and maximum temperature follow the seasonal effect where Decemeber and January have the lowerst temperature and July and August have the highest temperature in the year.
+
+## Reference
 NOAA data used in flexdashboard were accessed from the NOAA National Climatic Data Center, http://doi.org/10.7289/V5D21VHZ, on August 15, 2017.(Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas, X. Yin, S. Anthony, R. Ray, R.S. Vose, B.E.Gleason, and T.G. Houston, 2012: Global Historical Climatology Network - Daily (GHCN-Daily), Version 3.22.)

@@ -10,6 +10,6 @@ Click on the [Resume](resume.html) to find my full CV. Professional networks cou
 
 Click on the [Dashboard](dashboard.html) to view the flexdashboard that includes three distinct plot using NY NOAA datasets.
 
-Feel free to contact me if you have any further questions or concerns by clicking the [Mail](mailto:<yg2625@cumc.columbia.edu>). And all code used are include in my [Github](https://github.com/Lunararic/yg-p8105.github.io) page.
+Feel free to contact me if you have any further questions or concerns by clicking the [Mail](mailto:<yg2625@cumc.columbia.edu>). And all code used are included in my [Github](https://github.com/Lunararic/yg-p8105.github.io) page.
 
 <img src="images/whitelion.jpg" style="width:75%">
